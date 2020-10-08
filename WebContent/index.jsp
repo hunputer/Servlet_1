@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,30 +13,6 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link href="http:/MyWeb2/css/common/reset.css" rel="stylesheet">
-<link href="http:/MyWeb2/css/common/default.css" rel="stylesheet">
-
-<style type="text/css">
-	/*************** Section  ********************************/
-	
-	#board_content {
-		width: 60%;
-		
-		min-height: 842px;/* min, max */
-		
-		margin: 167px auto 80px;
-	}
-	
-	#tr1{
-		background-color: black;
-		color : #ffffff;
-		font-weight: bold;
-	}
-
-</style>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -54,7 +29,7 @@
           <li><a href="#">Page 1-3</a></li>
         </ul>
       </li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="./board/boardList.board">board</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -62,23 +37,11 @@
     </ul>
   </div>
 </nav>
-
-<section id="board_content">
-  	<table class = "table table-hover">
-  		<tr id = "tr1">
-  			<td>num</td><td>title</td><td>writer</td><td>date</td><td>hit</td>
-  		</tr>
-  		<c:forEach items="${ar}" var="dto">
-  			<tr>
-  				<td>${dto.num}</td>
-  				<td>${dto.title}</td>
-  				<td>${dto.writer}</td>
-  				<td>${dto.regDate}</td>
-  				<td>${dto.hit}</td>
-  			</tr>
-  		</c:forEach>
-  	</table>
- </section>
+  
+<div class="container">
+  <h3>Right Aligned Navbar</h3>
+  <p>The .navbar-right class is used to right-align navigation bar buttons.</p>
+</div>
 
 </body>
 </html>
